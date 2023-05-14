@@ -1,0 +1,14 @@
+- name: Zadanie_№1
+  hosts: Kovalev_Maksim
+  remote_user: skill
+
+  tasks:
+    - name: Installing cmatrix
+      become: yes
+      apt: pkg=cmatrix state=latest update_cache=true
+    - name: Installing cowsay
+      become: yes
+      apt: pkg=cowsay state=latest update_cache=true
+    - name: Installing sl
+      become: yes
+      apt: pkg=sl state=latest update_cache=true
